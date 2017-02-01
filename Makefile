@@ -15,12 +15,12 @@ else
 
 VPATH = $(SRC_DIR)
 
-INCLUDE_FLAGS:= -I$(LOC_DIR)/include/ \
-				-I$(BASE_DIR)/include
+INCLUDE_FLAGS:= -I$(3RD_DIR)/sdsl-lite/include/
+#\
+#			-I$(BASE_DIR)/include
 
 # Pre-processor flags
 CPPFLAGS= $(INCLUDE_FLAGS)
-
 # Common C and C++ flags
 CCXXFLAGS:=-g -std=c++11 -Wall -O2 -march=native -Wno-deprecated -ffunction-sections -fdata-sections -fopenmp
 # C-only flags
@@ -32,7 +32,7 @@ LDFLAGS+=-Wl,--gc-sections -fopenmp
 
 # Define libraries
 LIBS:= \
-        -L${LOC_DIR}/lib
+        -L${3RD_DIR}/sdsl-lite/lib
 
 ######
 #
@@ -47,7 +47,7 @@ PROGRAMS:=backwardMEM
 OBJS_backwardMEM = \
 			testutils.o \
 			backwardMEM.o
-LIBS_backwardMEM = $(LIBS) $(LOC_DIR)/sparseMEM/fasta.o -lrt -lsdsl -ldivsufsort -ldivsufsort64
+LIBS_backwardMEM = $(LIBS) $(3RD_DIR)/fasta.o -lrt -lsdsl -ldivsufsort -ldivsufsort64
 
 #
 # END List of programs
