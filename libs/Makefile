@@ -12,7 +12,7 @@ clean-prerequisites: clean-sdsl clean-fasta
 
 .PHONY: folders
 folders:
-	@echo "* Checking folders ..." ; \
+	@echo "* Checking folders..." ; \
 	[ -d $(LOC_DIR) ] || mkdir -p $(LOC_DIR) ; \
 	[ -d $(LOC_DIR)/include ] || mkdir -p $(LOC_DIR)/include ; \
 	[ -d $(LOC_DIR)/lib ] || mkdir -p $(LOC_DIR)/lib ; \
@@ -24,7 +24,7 @@ sdsl: folders $(LOC_DIR)/include/divsufsort64.h
 
 SDSL_NAME:=sdsl-lite
 $(LOC_DIR)/include/divsufsort64.h:
-	@echo "* SDSL-lite ..." ;	\
+	@echo "* SDSL-lite..." ;	\
 	git clone https://github.com/simongog/sdsl-lite.git;	\
 	if [ -d $(SDSL_NAME)/ ]; then	\
 		cd $(SDSL_NAME)/ &&	\
@@ -36,7 +36,7 @@ $(LOC_DIR)/include/divsufsort64.h:
 
 .PHONY: clean-sdsl
 clean-sdsl:
-	@echo "* Cleaning SDSL library ..." ; \
+	@echo "* Cleaning SDSL library..." ; \
 	rm -rf $(SDSL_NAME)/ \
 	rm -rf $(LOC_DIR)/include \
 	rm -rf $(LOC_DIR)/lib \
@@ -46,7 +46,7 @@ fasta: folders $(LOC_DIR)/sparseMEM/fasta.o
 
 FASTA_NAME:=sparseMEM/src/
 $(LOC_DIR)/sparseMEM/fasta.o:
-	@echo "* fasta.cpp ..." ;	\
+	@echo "* fasta.cpp..." ;	\
 	git clone https://github.com/zia1138/sparseMEM.git;	\
 	if [ -d $(FASTA_NAME)/ ]; then	\
 		cd $(FASTA_NAME)/ &&	\
@@ -58,7 +58,7 @@ $(LOC_DIR)/sparseMEM/fasta.o:
 
 .PHONY: clean-fasta
 clean-fasta:
-	@echo "* Cleaning fasta.cpp ..." ; \
+	@echo "* Cleaning fasta.cpp..." ; \
 	rm -rf $(LOC_DIR)/sparseMEM \
 	rm -rf $(CURDIR)/sparseMEM \
 	rm -rf $(LOC_DIR)
