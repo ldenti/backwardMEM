@@ -2,7 +2,7 @@
 
 Porting of backwardMEM by Ohlebusch *et al.* to sdsl-lite (the original source can be found [here](https://www.uni-ulm.de/in/theo/research/seqana/)).
 
-Tested with gcc version 5.4.0
+Tested with gcc version 5.4.0 and 5.4.1
 
 Clone and test with:
 ```bash
