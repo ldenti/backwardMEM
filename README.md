@@ -1,5 +1,5 @@
 # backwardMEM
-## A tool for computing maximal exact matches
+
 Porting of *backwardMEM* by Ohlebusch *et al.* to sdsl-lite (the original source can be found [here](https://www.uni-ulm.de/in/theo/research/seqana/)).
 
 *backwardMEM* is a tool for computing Maximal Exact Matches between two strings.
