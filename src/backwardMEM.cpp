@@ -15,12 +15,12 @@
    along with this program.  If not, see http://www.gnu.org/licenses/ .
 */
 
-#include "../sdsl-lite/include/sdsl/suffix_trees.hpp"   
-#include "../sdsl-lite/include/sdsl/suffix_array_algorithm.hpp"  
-#include "../sdsl-lite/include/sdsl/csa_wt.hpp" 
+#include "../libs/sdsl-lite/include/sdsl/suffix_trees.hpp"
+#include "../libs/sdsl-lite/include/sdsl/suffix_array_algorithm.hpp"
+#include "../libs/sdsl-lite/include/sdsl/csa_wt.hpp"
 #include "../src/testutils.hpp"
-#include "../sdsl-lite/include/sdsl/io.hpp"
-#include "../sdsl-lite/include/sdsl/construct.hpp"
+#include "../libs/sdsl-lite/include/sdsl/io.hpp"
+#include "../libs/sdsl-lite/include/sdsl/construct.hpp"
 
 #include <iostream>
 #include <vector>
