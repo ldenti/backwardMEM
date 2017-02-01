@@ -1,5 +1,7 @@
 *.txt
 bin/
 obj/
+libs/fasta.o
+libs/sdsl-lite/
 *~
 *.idx
