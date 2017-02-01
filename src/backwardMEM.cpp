@@ -75,7 +75,6 @@ tCST::size_type backward_search(const tCST::csa_type &csa,
     }
     size_type c_before_l = csa.wavelet_tree.rank(lb, c);
     size_type c_before_r = csa.wavelet_tree.rank(rb, c);
-    size_type lb2 = lb, rb2 = rb;
     lb = csa.C[cc]+c_before_l;
     rb = csa.C[cc]+c_before_r;
     return rb-lb;
@@ -309,7 +308,7 @@ void write_lock(int i) {
 int main(int argc, char* argv[]) {
     write_lock(0);		
     int min_len = 20;
-    mum_t type = MEM;
+    //mum_t type = MEM;
     bool rev_comp = false, _4column = false, nucleotides_only = false;
     long maxdescrlen = 0;
 
@@ -337,12 +336,14 @@ int main(int argc, char* argv[]) {
 	    usage(argv[0]);
 	}
 	else {
+	    //mum_t type = MEM;
 	    // Branch on long options.
+	    cout << longindex << endl;
 	    switch(longindex) { 
 	    case 0: min_len = atol(optarg); break;
 		//      case 1: type = MAM; break;
 	    case 1: rev_comp = true;	break;
-	    case 2: type = MEM; break;
+		//case 2: type = MEM; break;
 		//      case 4: type = MUM; break;
 		//      case 5: type = MAM; break;
 	    case 3: _4column = true; break;
