@@ -71,6 +71,12 @@ prerequisites:
 	@echo '* Building pre-requisites...' ; \
 	$(MAKE) -C $(3RD_DIR) prerequisites
 
+# Clean the pre-requisites
+.PHONY: clean-prerequisites
+clean-prerequisites:
+	@echo '* Cleaning pre-requisites...' ; \
+	$(MAKE) -C $(3RD_DIR) clean-prerequisites
+
 ######
 #
 # Pattern rules.
@@ -90,6 +96,5 @@ $(BIN_DIR)/%: $$(OBJS_%)
 	@echo '* LD  $@'; \
         [ -d $(BIN_DIR) ] || mkdir -p "$(BIN_DIR)" ; \
 	$(CXX) $(LDFLAGS) -o $@ $(OBJS_$(notdir $@)) $(LIBS_$(notdir $@))
-
 
 endif
