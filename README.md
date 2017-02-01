@@ -1,6 +1,6 @@
 # backwardMEM
 
-Porting of backwardMEM by Ohlebusch *et al.* [link](https://www.uni-ulm.de/in/theo/research/seqana/) to sdsl-lite.
+Porting of backwardMEM by Ohlebusch *et al.* ([link](https://www.uni-ulm.de/in/theo/research/seqana/)) to sdsl-lite.
 Tested with gcc version 5.4.0
 
 Clone and test with:
