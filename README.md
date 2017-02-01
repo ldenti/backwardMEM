@@ -10,5 +10,5 @@ git clone git@github.com:ldenti/backwardMEM.git
 cd backwardMEM
 make prerequisites
 make
-./bin/backwardMEM -l=3 ./example/T.fa example/P.fa
+./bin/backwardMEM -l=3 ./example/T.fa ./example/P.fa
 ```
