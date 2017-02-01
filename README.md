@@ -8,7 +8,7 @@ Tested with gcc version 5.4.0 and 5.4.1
 
 Clone and test with:
 ```bash
-git clone git@github.com:ldenti/backwardMEM.git
+git clone --recursive git@github.com:ldenti/backwardMEM.git
 cd backwardMEM
 make prerequisites
 make
