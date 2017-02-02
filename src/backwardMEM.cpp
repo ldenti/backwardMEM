@@ -88,7 +88,7 @@ void print_maximal_exact_match(tCST::size_type p1,
 			       const vector<long> &startpos,
 			       long maxdescrlen) {
     if(_4column == false) {
-	printf("%8ld  %8ld  %8ld\n", p1+1, p2+1, len);
+	cout << p1+1 << "," << p2+1 << "," << len << endl;
     }
     else {
 	long refseq=0, refpos=0;
@@ -103,7 +103,7 @@ void print_maximal_exact_match(tCST::size_type p1,
 	for(long j = 0; j < maxdescrlen - (long)refdescr[refseq].size() + 1; j++) {
 	    putchar(' ');
 	}
-	printf(" %8ld  %8ld  %8ld\n", refpos + 1, p2 + 1, len);
+	cout << refpos+1 << "," << p2+1 << "," << len << endl;
     }
 }
 
@@ -208,7 +208,7 @@ void maximal_exact_matches(const tCST &cst1,
     }
 }
 
-void anwer_query(const string &query_fasta,
+void answer_query(const string &query_fasta,
 		 const tCST &cst1,
 		 tCST::size_type min_len,
 		 const vector<string> &refdescr,
@@ -414,7 +414,7 @@ int main(int argc, char* argv[]) {
     write_lock(1);
     stop_watch stopwatch;
     stopwatch.start();
-    anwer_query(query_fasta, cst, min_len, refdescr, startpos, maxdescrlen, rev_comp, _4column, nucleotides_only);
+    answer_query(query_fasta, cst, min_len, refdescr, startpos, maxdescrlen, rev_comp, _4column, nucleotides_only);
     stopwatch.stop();
     cerr<<"# Time for algorithm: ";
     cerr<<stopwatch.getUserTime();
